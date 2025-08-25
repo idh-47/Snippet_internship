@@ -19,7 +19,7 @@ import DevelopmentFaq from "../../../container/Faq/DevelopmentFaq.js";
 import ContactInformationThree from "../../../container/ContactInformation/ContactInformationThree.js";
 
 //data imports
-import FooterDatafr from "../../../data/Footer/footerItem-fr.json";
+import FooterDatafr from "../../../data/Footer/footeritem-fr.json";
 import contactDataTwofr from "../../../data/contactInfo/contactInfoTwo-fr.json";
 
 const DevelopmentPage = () => {

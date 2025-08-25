@@ -1,51 +1,59 @@
 import Link from "next/link";
-import URLs from "../../constants/urls";
+import { URLs, URLsFr } from "../../constants/urls";
+import LanguageSwitcher from "./languageSwitcher";
+import { useRouter } from "next/router";
+import { useEffect, useState } from "react";
 
-const NavBar = () => {
+const NavBar = (props) => {
+  const router = useRouter();
+  const [isFrench, setIsFrench] = useState(false);
+
+  useEffect(() => {
+    setIsFrench(router.asPath.startsWith("/fr"));
+  }, [router.asPath]);
+
+  const currentURLs = isFrench ? URLsFr : URLs;
   return (
     <nav className="site-main-menu">
       <ul>
         <li>
-          <Link href={URLs.home}>
-            <span className="menu-text">Home</span>
+          <Link href={currentURLs.home}>
+            <span className="menu-text">{props.home}</span>
           </Link>
         </li>
         <li>
-          <Link href={URLs.about}>
-            <span className="menu-text">About Us</span>
+          <Link href={currentURLs.about}>
+            <span className="menu-text">{props.about}</span>
           </Link>
         </li>
         <li className="has-children">
-          <Link href={URLs.services}>
-            <span className="menu-text">Our Services</span>
+          <Link href={currentURLs.services}>
+            <span className="menu-text">{props.services}</span>
           </Link>
-          <span className="menu-toggle">
-            <i className="far fa-angle-down"></i>
-          </span>
           <span className="menu-toggle">
             <i className="far fa-angle-down"></i>
           </span>
           <ul className="sub-menu">
             <li>
-              <Link href={URLs.servicesConsulting}>
-                <span className="menu-text">Consulting</span>
+              <Link href={currentURLs.servicesConsulting}>
+                <span className="menu-text">{props.consulting}</span>
               </Link>
             </li>
             <li>
-              <Link href={URLs.servicesDesign}>
-                <span className="menu-text">UX/UI Design</span>
+              <Link href={currentURLs.servicesDesign}>
+                <span className="menu-text">{props.design}</span>
               </Link>
             </li>
             <li>
-              <Link href={URLs.servicesDevelopment}>
-                <span className="menu-text">Development</span>
+              <Link href={currentURLs.servicesDevelopment}>
+                <span className="menu-text">{props.development}</span>
               </Link>
             </li>
           </ul>
         </li>
         <li>
-          <Link href={URLs.contact}>
-            <span className="menu-text">Contact Us</span>
+          <Link href={currentURLs.contact}>
+            <span className="menu-text">{props.contact}</span>
           </Link>
         </li>
         <li>
@@ -53,7 +61,9 @@ const NavBar = () => {
             <span className="menu-text">(+212) 663-212-790</span>
           </a>
         </li>
-        <li></li>
+        <li className="language-switcher-item">
+          <LanguageSwitcher />
+        </li>
       </ul>
     </nav>
   );

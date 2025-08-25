@@ -4,7 +4,7 @@ import NavBar from "../../components/NavBar/NavBar";
 import MobileMenu from "../../components/NavBar/MobileMenu";
 import MainSearch from "../../components/NavBar/MainSearch";
 
-const Header = () => {
+const Header = (props) => {
   const [ofcanvasShow, setOffcanvasShow] = useState(false);
   const onCanvasHandler = () => {
     setOffcanvasShow((prev) => !prev);
@@ -43,7 +43,15 @@ const Header = () => {
               </div>
               <div className="col-auto col-xl d-flex align-items-center justify-content-xl-center justify-content-end order-2 order-xl-1">
                 <div className="menu-column-area d-none d-xl-block position-static">
-                  <NavBar />
+                  <NavBar
+                    home={props.home}
+                    about={props.about}
+                    services={props.services}
+                    consulting={props.consulting}
+                    design={props.design}
+                    development={props.development}
+                    contact={props.contact}
+                  />
                 </div>
                 <div className="header-mobile-menu-toggle d-xl-none ms-sm-2">
                   <button

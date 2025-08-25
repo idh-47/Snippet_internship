@@ -1,0 +1,70 @@
+[
+  {
+    "id": 1,
+    "title": "Services",
+    "list": [
+      {
+        "id": 1,
+        "text": "Conseil",
+        "url": "/fr/services/consultation"
+      },
+      {
+        "id": 2,
+        "text": "Conception UX/UI",
+        "url": "/fr/services/ux-ui-design"
+      },
+      {
+        "id": 3,
+        "text": "Développement",
+        "url": "/fr/services/developpement"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "Cas d'utilisation",
+    "list": [
+      {
+        "id": 1,
+        "text": "E-commerce",
+        "url": "/fr/services/developpement"
+      },
+      {
+        "id": 2,
+        "text": "Application Web & Mobile",
+        "url": "/fr/services/developpement"
+      },
+      {
+        "id": 3,
+        "text": "Intégrations tierces",
+        "url": "/fr/services/developpement"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "À propos",
+    "list": [
+      {
+        "id": 1,
+        "text": "Qui nous sommes",
+        "url": "/fr/Qui-nous-sommes"
+      },
+      {
+        "id": 2,
+        "text": "Pourquoi nous choisir",
+        "url": "/fr/services"
+      },
+      {
+        "id": 3,
+        "text": "Notre processus",
+        "url": "/fr/services"
+      },
+      {
+        "id": 4,
+        "text": "Contactez-nous",
+        "url": "/fr/contact"
+      }
+    ]
+  }
+]

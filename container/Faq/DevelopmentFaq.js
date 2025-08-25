@@ -9,7 +9,20 @@ import Accordion, {
   AccordionContent,
 } from "../../components/Accordion";
 
-const DevelopmentFaq = () => {
+const DevelopmentFaq = ({
+  subTitle,
+  title,
+  question1,
+  response1,
+  question2,
+  response2,
+  question3,
+  response3,
+  question4,
+  response4,
+  question5,
+  response5,
+}) => {
   const [scale] = useState(1.04);
   const sceneEl = useRef(null);
   useEffect(() => {
@@ -27,60 +40,33 @@ const DevelopmentFaq = () => {
         <div className="row row-cols-lg-2 row-cols-1 mb-n6">
           <div className="col mb-6" data-aos="fade-up">
             <div className="faq-content">
-              <SectionTitleTwo
-                subTitle="Development FAQs"
-                title="Answers to some questions about our development process"
-              />
+              <SectionTitleTwo subTitle={subTitle} title={title} />
               <div className="agency-accordion max-mb-n30">
                 <Accordion>
                   <AccordionItem id="one">
-                    <AccordionTitle id="one">
-                      What types of development projects does Snippet handle?
-                    </AccordionTitle>
-                    <AccordionContent id="one">
-                      We manage a wide range of projects, including web, mobile,
-                      and custom software development tailored to your needs.
-                    </AccordionContent>
+                    <AccordionTitle id="one">{question1}</AccordionTitle>
+                    <AccordionContent id="one">{response1}</AccordionContent>
                   </AccordionItem>
                   <AccordionItem id="two">
-                    <AccordionTitle id="two">
-                      How does Snippet ensure code quality and security?
-                    </AccordionTitle>
-                    <AccordionContent id="two">
-                      We implement industry best practices, conduct regular code
-                      reviews, and perform rigorous testing to maintain high
-                      standards.
-                    </AccordionContent>
+                    <AccordionTitle id="two">{question2}</AccordionTitle>
+                    <AccordionContent id="two">{response2}</AccordionContent>
                   </AccordionItem>
                   <AccordionItem id="three">
-                    <AccordionTitle id="three">
-                      Can you integrate with existing systems and platforms?
-                    </AccordionTitle>
-                    <AccordionContent id="three">
-                      Yes, we specialize in seamless API integrations and can
-                      work with legacy systems.
-                    </AccordionContent>
+                    <AccordionTitle id="three">{question3}</AccordionTitle>
+                    <AccordionContent id="three">{response3}</AccordionContent>
                   </AccordionItem>
-                  <AccordionItem id="four">
-                    <AccordionTitle id="four">
-                      Do you offer ongoing support after project launch?
-                    </AccordionTitle>
-                    <AccordionContent id="four">
-                      Absolutely. We provide maintenance and support services to
-                      ensure continued performance and updates.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem id="five">
-                    <AccordionTitle id="five">
-                      How long does a typical development project take?
-                    </AccordionTitle>
-                    <AccordionContent id="five">
-                      We work in Agile sprints, allowing for flexibility and
-                      iterative progress. Project timelines vary based on
-                      complexity, but we collaborate closely with you to define
-                      milestones and deliverables.
-                    </AccordionContent>
-                  </AccordionItem>
+                  {question4 && response4 && (
+                    <AccordionItem id="four">
+                      <AccordionTitle id="four">{question4}</AccordionTitle>
+                      <AccordionContent id="four">{response4}</AccordionContent>
+                    </AccordionItem>
+                  )}
+                  {question5 && response5 && (
+                    <AccordionItem id="five">
+                      <AccordionTitle id="five">{question5}</AccordionTitle>
+                      <AccordionContent id="five">{response5}</AccordionContent>
+                    </AccordionItem>
+                  )}
                 </Accordion>
               </div>
             </div>
@@ -96,7 +82,7 @@ const DevelopmentFaq = () => {
                 <Tilt scale={scale} transitionSpeed={4000}>
                   <NextImage
                     src="/images/skill/snippet-digital-agency-faq-morocco.jpg"
-                    alt="Snippet - Creating tomorrow’s technology today"
+                    alt="Snippet - Creating tomorrow's technology today"
                     fill
                     sizes="(max-width: 767px) 250w,
                           370w"

@@ -9,7 +9,20 @@ import Accordion, {
   AccordionContent,
 } from "../../components/Accordion";
 
-const UxUiDesignFaq = () => {
+const UxUiDesignFaq = ({
+  subTitle,
+  title,
+  question1,
+  response1,
+  question2,
+  response2,
+  question3,
+  response3,
+  question4,
+  response4,
+  question5,
+  response5,
+}) => {
   const [scale] = useState(1.04);
   const sceneEl = useRef(null);
   useEffect(() => {
@@ -27,58 +40,33 @@ const UxUiDesignFaq = () => {
         <div className="row row-cols-lg-2 row-cols-1 mb-n6">
           <div className="col mb-6" data-aos="fade-up">
             <div className="faq-content">
-              <SectionTitleTwo
-                subTitle="UX/UI Design FAQs"
-                title="Everything you need to know about our design process"
-              />
+              <SectionTitleTwo subTitle={subTitle} title={title} />
               <div className="agency-accordion max-mb-n30">
                 <Accordion>
                   <AccordionItem id="one">
-                    <AccordionTitle id="one">
-                      What is your approach to user-centered design?
-                    </AccordionTitle>
-                    <AccordionContent id="one">
-                      We focus on research-driven, user-centered methods to
-                      create intuitive and effective interfaces.
-                    </AccordionContent>
+                    <AccordionTitle id="one">{question1}</AccordionTitle>
+                    <AccordionContent id="one">{response1}</AccordionContent>
                   </AccordionItem>
                   <AccordionItem id="two">
-                    <AccordionTitle id="two">
-                      How does UX differ from UI in your services?
-                    </AccordionTitle>
-                    <AccordionContent id="two">
-                      UX focuses on overall experience, while UI hones in on the
-                      visual and interactive design elements.
-                    </AccordionContent>
+                    <AccordionTitle id="two">{question2}</AccordionTitle>
+                    <AccordionContent id="two">{response2}</AccordionContent>
                   </AccordionItem>
                   <AccordionItem id="three">
-                    <AccordionTitle id="three">
-                      Can you help improve the design of an existing website or
-                      app?
-                    </AccordionTitle>
-                    <AccordionContent id="three">
-                      Absolutely. We offer redesign services that enhance both
-                      usability and aesthetic appeal.
-                    </AccordionContent>
+                    <AccordionTitle id="three">{question3}</AccordionTitle>
+                    <AccordionContent id="three">{response3}</AccordionContent>
                   </AccordionItem>
-                  <AccordionItem id="four">
-                    <AccordionTitle id="four">
-                      What tools do you use for prototyping and design?
-                    </AccordionTitle>
-                    <AccordionContent id="four">
-                      We use industry-leading tools, such as Figma and Sketch,
-                      to build and test our designs.
-                    </AccordionContent>
-                  </AccordionItem>
-                  <AccordionItem id="five">
-                    <AccordionTitle id="five">
-                      How long does a typical UX/UI design project take?
-                    </AccordionTitle>
-                    <AccordionContent id="five">
-                      Timelines vary, but we work with clients to establish
-                      clear milestones based on project complexity.
-                    </AccordionContent>
-                  </AccordionItem>
+                  {question4 && response4 && (
+                    <AccordionItem id="four">
+                      <AccordionTitle id="four">{question4}</AccordionTitle>
+                      <AccordionContent id="four">{response4}</AccordionContent>
+                    </AccordionItem>
+                  )}
+                  {question5 && response5 && (
+                    <AccordionItem id="five">
+                      <AccordionTitle id="five">{question5}</AccordionTitle>
+                      <AccordionContent id="five">{response5}</AccordionContent>
+                    </AccordionItem>
+                  )}
                 </Accordion>
               </div>
             </div>
@@ -94,7 +82,7 @@ const UxUiDesignFaq = () => {
                 <Tilt scale={scale} transitionSpeed={4000}>
                   <NextImage
                     src="/images/skill/snippet-digital-agency-faq-morocco.jpg"
-                    alt=""
+                    alt="Snippet - Creating tomorrow's technology today"
                     fill
                     sizes="(max-width: 767px) 250w,
                           370w"
@@ -105,7 +93,7 @@ const UxUiDesignFaq = () => {
                 <Tilt scale={scale} transitionSpeed={4000}>
                   <NextImage
                     src="/images/skill/snippet-agency-consulting.jpg"
-                    alt=""
+                    alt="Snippet - Engineering solutions for a better future"
                     fill
                     sizes="(max-width: 767px) 250w,
                           370w"

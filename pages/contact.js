@@ -10,6 +10,10 @@ import Footer from "../container/Footer/Footer";
 import ScrollToTop from "../components/ScrollToTop.jsx";
 import headerBg from "../public/images/bg/snippet-breadcrumb-bg-casablanca.jpg";
 
+//data imports
+import contactData from "../data/contactInfo/contactInfo.json";
+import FooterData from "../data/Footer/footerItem.json";
+
 const Contact = () => {
   return (
     <>
@@ -27,16 +31,28 @@ const Contact = () => {
         <meta name="robots" content="index, follow" />
       </Head>
       <main>
-        <Header />
+        <Header
+          home="Home"
+          about="About Us"
+          services="Our Services"
+          consulting="Consulting"
+          design="UX/UI Design"
+          development="Development"
+          contact="Contact Us"
+        />
         <Breadcrumb
           image={headerBg.src}
           title="Our digital agency is located in the vibrant city of Casablanca"
           content="Home"
           contentTwo="Contact Us"
         />
-        <ContactInformation />
+        <ContactInformation
+          title="CONTACT US, YOU WILL NOT BE DISAPPOINTED"
+          subTitle="Don't hesitate to get in touch with us – we would be happy to discuss your needs and goals in more detail. Contact us today and let's start a conversation!"
+          data={contactData}
+        />
         <GoogleMap />
-        <Footer />
+        <Footer data={FooterData} />
         <ScrollToTop />
       </main>
     </>

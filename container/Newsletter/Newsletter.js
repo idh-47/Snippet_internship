@@ -20,7 +20,7 @@ export async function getStaticProps() {
   };
 }
 
-const Newsletter = (newsletterBlur) => {
+const Newsletter = ({ newsletterBlur, ...props }) => {
   const sceneEl = useRef(null);
   useEffect(() => {
     const parallaxInstance = new Parallax(sceneEl.current, {
@@ -51,8 +51,8 @@ const Newsletter = (newsletterBlur) => {
               <div className="newsletter-content"></div>
               <SectionTitle
                 titleOption="color-light text-center"
-                title="Let's discuss how we can work together"
-                subTitle="Ready to start your project? We would love to hear from you. Our team of experts is ready to help you bring your digital projects to life. "
+                title={props.title}
+                subTitle={props.subTitle}
               />
             </div>
           </div>

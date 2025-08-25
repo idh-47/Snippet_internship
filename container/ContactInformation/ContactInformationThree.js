@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import contactDataTwo from "../../data/contactInfo/contactInfoTwo.json";
 import ContactInfoItem from "../../components/ContactInfo/ContactInfoItemTwo.jsx";
 import SectionTitle from "../../components/SectionTitles/SectionTitle";
 import SectionTitleTwo from "../../components/SectionTitles/SectionTitleTwo.jsx";
@@ -9,7 +8,7 @@ import NextImage from "next/image";
 import contactBg from "../../public/images/bg/contact-bg.jpg";
 import { CldImage } from "next-cloudinary";
 
-const ContactInformationThree = () => {
+const ContactInformationThree = (props) => {
   const sceneEl = useRef(null);
   useEffect(() => {
     const parallaxInstance = new Parallax(sceneEl.current, {
@@ -21,9 +20,7 @@ const ContactInformationThree = () => {
     return () => parallaxInstance.disable();
   }, []);
   return (
-    <div
-      className="section section-padding contact-section overlay-two"
-    >
+    <div className="section section-padding contact-section overlay-two">
       <CldImage
         src="contact-bg_x5ercg"
         alt=""
@@ -39,12 +36,12 @@ const ContactInformationThree = () => {
             <div className="contact-Information me-xl-7">
               <SectionTitleTwo
                 classOption="color-light"
-                subTitle="Moroccan Agency with a Global Reach"
-                title="Our digital agency is located in the vibrant city of Casablanca"
+                subTitle={props.subTitle}
+                title={props.title}
               />
 
-              {contactDataTwo &&
-                contactDataTwo.map((single, key) => {
+              {props.data &&
+                props.data.map((single, key) => {
                   return (
                     <React.Fragment key={key}>
                       <ContactInfoItem
@@ -66,8 +63,8 @@ const ContactInformationThree = () => {
               <SectionTitle
                 titleOption="section-title text-center mb-7"
                 headingOption="title fz-28"
-                title="We’d love to hear about your project"
-                subTitle="We make it simple for clients to connect with us and get their solutions implemented"
+                title={props.title2}
+                subTitle={props.subTitle2}
               />
             </div>
           </div>

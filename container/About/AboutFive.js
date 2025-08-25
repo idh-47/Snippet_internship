@@ -5,7 +5,7 @@ import Tilt from "react-parallax-tilt";
 import Parallax from "parallax-js";
 import NextImage from "next/image";
 
-const AboutFive = ({ classOption }) => {
+const AboutFive = ({ classOption, ...props }) => {
   const [scale] = useState(1.04);
   const sceneEl = useRef(null);
 
@@ -55,39 +55,20 @@ const AboutFive = ({ classOption }) => {
             data-aos-delay="300"
           >
             <div className="about-content-area whychoose-content">
-              <SectionTitleTwo
-                subTitle="Your needs, your budget, our expertise"
-                title="We help startups, small and big companies"
-              />
+              <SectionTitleTwo subTitle={props.subTitle} title={props.title} />
 
-              <p>
-                Our team of expert designers, developers, and strategists are
-                dedicated to delivering innovative and effective digital
-                solutions that drive success.
-              </p>
+              <p>{props.desc}</p>
               <div className="row row-cols-sm-2 row-cols-auto mb-n6">
                 <div className="col mb-6">
                   <div className="about-funfact">
-                    <h6 className="text">User-Centric Approach</h6>
-                    <p>
-                      When developing MVPs for startups, we prioritize the needs
-                      and expectations of end-users. By conducting continuous
-                      user testing and incorporating feedback, we ensure that
-                      the final product accurately meets the needs of its
-                      intended audience.
-                    </p>
+                    <h6 className="text">{props.miniTitle1}</h6>
+                    <p>{props.minidesc}</p>
                   </div>
                 </div>
                 <div className="col mb-6">
                   <div className="about-funfact">
-                    <h6 className="text">Business Thinking</h6>
-                    <p>
-                      We’ve worked on our own startups, so we know your
-                      struggle. We want to be your partner and take a look at
-                      your product from the business perspective. There’s a lot
-                      more to startups than just technology and we are eager to
-                      embrace it.
-                    </p>
+                    <h6 className="text">{props.miniTitle2}</h6>
+                    <p>{props.minidesc2}</p>
                   </div>
                 </div>
               </div>

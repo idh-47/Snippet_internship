@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "icon": "/images/svg/linea/linea-basic-target.svg",
+    "title": "Consulting",
+    "desc": "Nous vous aidons à identifier les fonctionnalités clés qui feront ressortir votre produit, et nous travaillons avec vous pour concevoir et créer une solution qui répond à vos besoins et dépasse vos attentes.",
+    "pageLink": "En savoir plus",
+    "link": "/services/consulting"
+  },
+  {
+    "id": "2",
+    "icon": "/images/svg/linea/linea-basic-picture-multiple.svg",
+    "title": "Conception UX/UI",
+    "desc": "Que vous ayez besoin d’un nouveau site web, d’une application ou de tout autre type de produit numérique, nous avons les compétences et l’expertise pour concevoir une solution qui répond à vos besoins et offre la meilleure expérience utilisateur possible.",
+    "pageLink": "En savoir plus",
+    "link": "/services/ux-ui-design"
+  },
+  {
+    "id": "3",
+    "icon": "/images/svg/linea/linea-basic-picture.svg",
+    "title": "Développement",
+    "desc": "Nous prenons en charge l’ensemble du cycle de développement de votre produit, depuis la conceptualisation et la phase de conception initiales, jusqu’au codage, aux tests et au déploiement.",
+    "pageLink": "En savoir plus",
+    "link": "/services/development"
+  },
+  {
+    "id": "4",
+    "icon": "/images/svg/linea/linea-ecommerce-cart-plus.svg",
+    "title": "E-commerce",
+    "desc": "Nos services de conception web peuvent redonner une nouvelle image à votre entreprise sur le marché en ligne.",
+    "pageLink": "En savoir plus",
+    "link": "services"
+  },
+  {
+    "id": "5",
+    "icon": "/images/svg/linea/linea-basic-gear.svg",
+    "title": "Développement",
+    "desc": "Nos services de conception web peuvent redonner une nouvelle image à votre entreprise sur le marché en ligne.",
+    "pageLink": "En savoir plus",
+    "link": "services"
+  },
+  {
+    "id": "6",
+    "icon": "/images/svg/linea/linea-basic-display.svg",
+    "title": "Marketing",
+    "desc": "Nos services de conception web peuvent redonner une nouvelle image à votre entreprise sur le marché en ligne.",
+    "pageLink": "En savoir plus",
+    "link": "services"
+  }
+]

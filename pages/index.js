@@ -11,6 +11,11 @@ import Intro from "../components/Intro/Intro.jsx";
 import ScrollToTop from "../components/ScrollToTop";
 import SwiperSlider, { SwiperSlide } from "../components/swiper";
 
+//data imports
+import IconBoxData from "../data/iconBox/icon-box.json";
+import contactData from "../data/contactInfo/contactInfo.json";
+import FooterData from "../data/Footer/footerItem.json";
+
 // Container imports
 import ServiceIconBox from "../container/service/ServiceIconBox";
 import Newsletter from "../container/Newsletter/Newsletter";
@@ -35,7 +40,15 @@ export default function Home({ swiperOption, heroBlur }) {
         />
       </Head>
       <main>
-        <Header />
+        <Header
+          home="Home"
+          about="About Us"
+          services="Our Services"
+          consulting="Consulting"
+          design="UX/UI Design"
+          development="Development"
+          contact="Contact Us"
+        />
 
         <div className="intro-slider-wrap section">
           <SwiperSlider
@@ -57,17 +70,53 @@ export default function Home({ swiperOption, heroBlur }) {
                   objectFit: "cover",
                 }}
               />
-              <Intro />
+              <Intro
+                we="We"
+                typeWriter={["Design", "Develop", "Launch"]}
+                DP="Digital products"
+                desc="We partner with companies, brands, and founders to build solutions that truly transform businesses and connect meaningfully to the people that use them."
+                GS="Get Started"
+                LM="Learn More"
+              />
             </SwiperSlide>
           </SwiperSlider>
         </div>
 
-        <HomeAbout />
-        <ServiceIconBox classOption="bg-color-1" />
-        <HomeSuccess />
-        <Newsletter />
-        <ContactInformation />
-        <Footer />
+        <HomeAbout
+          title="We are a full-service digital agency"
+          subTitle="No matter if it's a small website or bespoke application we are always ready to offer our services with dedication and perfection."
+          subTitle2="Empowering your digital journey"
+          title2="We think strategy, craft design, develop digital.."
+          desc="We can help you transform an idea into a fully viable product,
+                starting by defining the goals and building a roadmap to the
+                best user-experience solution."
+          btnText="About Us"
+        />
+        <ServiceIconBox
+          classOption="bg-color-1"
+          title="We can help you bring your idea to life"
+          subTitle="From idea to viable product, we can help you define your goals and create a roadmap to the best user experience solution."
+          data={IconBoxData}
+        />
+        <HomeSuccess
+          subTitle="Your success is our motivation"
+          title="We are passionate about using technology to solve problems and create value"
+          website="Websites"
+          ecommerce="E-Commerce"
+          webMobileApps="Web & Mobile Apps"
+          apiIntegrations="API & 3rd Party Integrations"
+          devops="DevOps"
+        />
+        <Newsletter
+          title="Let's discuss how we can work together"
+          subTitle="Ready to start your project? We would love to hear from you. Our team of experts is ready to help you bring your digital projects to life. "
+        />
+        <ContactInformation
+          title="CONTACT US, YOU WILL NOT BE DISAPPOINTED"
+          subTitle="Don't hesitate to get in touch with us – we would be happy to discuss your needs and goals in more detail. Contact us today and let's start a conversation!"
+          data={contactData}
+        />
+        <Footer data={FooterData} />
         <ScrollToTop />
       </main>
     </>
@@ -76,7 +125,7 @@ export default function Home({ swiperOption, heroBlur }) {
 
 export async function getStaticProps() {
   const heroBlur = getCldImageUrl({
-    src: 'snippet-ws/hero-image/j3ku5sw4mhfidbkrum5d',
+    src: "snippet-ws/hero-image/j3ku5sw4mhfidbkrum5d",
     quality: 10,
     blur: 1000,
   });
@@ -96,7 +145,7 @@ export async function getStaticProps() {
   return {
     props: {
       swiperOption,
-      heroBlur
+      heroBlur,
     },
   };
 }

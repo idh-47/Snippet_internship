@@ -28,7 +28,7 @@ export async function getStaticProps() {
   };
 }
 
-const HomeAbout = (about1Blur, about2Blur) => {
+const HomeAbout = ({ about1Blur, about2Blur, ...props }) => {
   const [scale] = useState(1.04);
   const sceneEl = useRef(null);
 
@@ -44,10 +44,7 @@ const HomeAbout = (about1Blur, about2Blur) => {
   return (
     <div className="section section-padding-t90 section-padding-bottom-200">
       <div className="container">
-        <SectionTitle
-          title="We are a full-service digital agency"
-          subTitle="No matter if it's a small website or bespoke application we are always ready to offer our services with dedication and perfection."
-        />
+        <SectionTitle title={props.title} subTitle={props.subTitle} />
 
         <div className="row">
           <div className="col-xl-7 col-lg-6 col-12" data-aos="fade-up">
@@ -99,21 +96,17 @@ const HomeAbout = (about1Blur, about2Blur) => {
           >
             <div className="about-content-area">
               <SectionTitleTwo
-                subTitle="Empowering your digital journey"
-                title="We think strategy, craft design, develop digital.."
+                subTitle={props.subTitle2}
+                title={props.title2}
               />
 
-              <p>
-                We can help you transform an idea into a fully viable product,
-                starting by defining the goals and building a roadmap to the
-                best user-experience solution.
-              </p>
+              <p>{props.desc}</p>
 
               <Link
                 className="btn btn-primary btn-hover-secondary mt-xl-8 mt-lg-8 mt-md-6 mt-4"
                 href="/about-us"
               >
-                About Us
+                {props.btnText}
               </Link>
             </div>
           </div>

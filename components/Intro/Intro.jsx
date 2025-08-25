@@ -4,12 +4,12 @@ import Typewriter from "typewriter-effect";
 import Link from "next/link";
 import URLs from "../../constants/urls";
 
-const Intro = ({ data }) => {
-  const IntroData = {
-    id: "1",
-    title: "We Design, Develop and Launch digital products",
-    desc: "We partner with companies, brands, and founders to build solutions that truly transform businesses and connect meaningfully to the people that use them.",
-  };
+const Intro = (props) => {
+  // const IntroData = {
+  //   id: "1",
+  //   title: "We Design, Develop and Launch digital products",
+  //   desc: "We partner with companies, brands, and founders to build solutions that truly transform businesses and connect meaningfully to the people that use them.",
+  // };
   return (
     <div className="intro-section overlay section">
       <div className="container">
@@ -17,32 +17,32 @@ const Intro = ({ data }) => {
           <div className="col align-self-center">
             <div className="intro-content mt-xl-8 mt-lg-8 mt-md-8 mt-sm-8 mt-xs-8">
               <h2 className="title ah-headline">
-                We{" "}
+                {props.we}{" "}
                 <Typewriter
                   options={{
-                    strings: ["Design", "Develop", "Launch"],
+                    strings: props.typeWriter,
                     autoStart: true,
                     loop: true,
                     deleteSpeed: 110,
                   }}
                 />
-                Digital products{" "}
+                {props.DP}{" "}
               </h2>
               <div className="desc">
-                <p>{IntroData.desc}</p>
+                <p>{props.desc}</p>
               </div>
               <Link
                 href={URLs.contact}
                 className="btn btn-primary btn-hover-secondary"
               >
-                Get Started
+                {props.GS}
               </Link>
               <Link
                 href={URLs.services}
                 className="btn btn-outline-white btn-hover-primary"
               >
                 {" "}
-                Learn More{" "}
+                {props.LM}{" "}
               </Link>
             </div>
           </div>

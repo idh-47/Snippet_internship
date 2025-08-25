@@ -9,7 +9,7 @@ import Accordion, {
   AccordionContent,
 } from "../../components/Accordion";
 
-const ConsultingFaq = () => {
+const ConsultingFaq = (props) => {
   const [scale] = useState(1.04);
   const sceneEl = useRef(null);
   useEffect(() => {
@@ -27,40 +27,27 @@ const ConsultingFaq = () => {
         <div className="row row-cols-lg-2 row-cols-1 mb-n6">
           <div className="col mb-6" data-aos="fade-up">
             <div className="faq-content">
-              <SectionTitleTwo
-                subTitle="Consulting FAQs"
-                title="Answering your questions about digital strategy and consulting"
-              />
+              <SectionTitleTwo subTitle={props.subTitle} title={props.title} />
               <div className="agency-accordion max-mb-n30">
                 <Accordion>
                   <AccordionItem id="one">
-                    <AccordionTitle id="one">
-                      What types of businesses benefit from consulting?
-                    </AccordionTitle>
+                    <AccordionTitle id="one">{props.question1}</AccordionTitle>
                     <AccordionContent id="one">
-                      Consulting can benefit any business looking to enhance its
-                      digital presence, streamline processes, or develop a
-                      strategic roadmap for growth.
+                      {props.response1}
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem id="two">
-                    <AccordionTitle id="two">
-                      How does the consulting process work?
-                    </AccordionTitle>
+                    <AccordionTitle id="two">{props.question2}</AccordionTitle>
                     <AccordionContent id="two">
-                      We begin with an in-depth assessment of your needs, then
-                      provide tailored recommendations and strategies aligned
-                      with your goals.
+                      {props.response2}
                     </AccordionContent>
                   </AccordionItem>
                   <AccordionItem id="three">
                     <AccordionTitle id="three">
-                      Can I get help with a specific project, or do you provide
-                      ongoing consulting?
+                      {props.question3}
                     </AccordionTitle>
                     <AccordionContent id="three">
-                      We offer both one-time project consulting and ongoing
-                      advisory services to support continuous growth.
+                      {props.response3}
                     </AccordionContent>
                   </AccordionItem>
                 </Accordion>

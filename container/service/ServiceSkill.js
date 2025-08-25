@@ -4,7 +4,7 @@ import Tilt from "react-parallax-tilt";
 import Parallax from "parallax-js";
 import NextImage from "next/image";
 
-const ServiceSkill = () => {
+const ServiceSkill = (props) => {
   const [scale] = useState(1.04);
   const sceneEl = useRef(null);
   useEffect(() => {
@@ -28,7 +28,15 @@ const ServiceSkill = () => {
             data-aos="fade-up"
           >
             <div className="progressbar-area mt-lg-0 mt-md-50 mt-sm-50 mt-40">
-              <ProgressBarSkills />
+              <ProgressBarSkills
+                title={props.title}
+                subTitle={props.subTitle}
+                website={props.website}
+                ecommerce={props.ecommerce}
+                webMobileApps={props.webMobileApps}
+                apiIntegrations={props.apiIntegrations}
+                devops={props.devops}
+              />
             </div>
           </div>
 

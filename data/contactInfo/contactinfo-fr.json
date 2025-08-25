@@ -1,0 +1,20 @@
+[
+  {
+    "id": "1",
+    "icon": "/images/svg/linea/linea-basic-map.svg",
+    "title": "Nos emplacements",
+    "info": "77, Rue Mohamed Smiha <br/> Etg 10 Nº57 - Casablanca"
+  },
+  {
+    "id": "2",
+    "icon": "/images/svg/linea/linea-basic-message-txt.svg",
+    "title": "Appelez-nous",
+    "info": "(+212) 663-212-790 <br/> (+212) 522-616-183"
+  },
+  {
+    "id": "3",
+    "icon": "/images/svg/linea/linea-basic-mail-open-text.svg",
+    "title": "Adresse e-mail",
+    "info": "contact@snippet.ma <br/> support@snippet.ma"
+  }
+]

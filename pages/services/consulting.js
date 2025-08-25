@@ -18,6 +18,10 @@ import dividerBg from "../../public/images/bg/snippet-breadcrumb-bg-service.jpg"
 import ConsultingFaq from "../../container/Faq/ConsultingFaq.js";
 import ContactInformationThree from "../../container/ContactInformation/ContactInformationThree.js";
 
+//data imports
+import FooterData from "../../data/Footer/footerItem.json";
+import contactDataTwo from "../../data/contactInfo/contactInfoTwo.json";
+
 const ConsultingPage = () => {
   const [didViewCountUp, setDidViewCountUp] = useState(false);
   const onVisibilityChange = (isVisible) => {
@@ -55,7 +59,15 @@ const ConsultingPage = () => {
         <meta name="robots" content="index, follow" />
       </Head>
       <main>
-        <Header />
+        <Header
+          home="Home"
+          about="About Us"
+          services="Our Services"
+          consulting="Consulting"
+          design="UX/UI Design"
+          development="Development"
+          contact="Contact Us"
+        />
         <Breadcrumb
           image={headerBg.src}
           title="Empowering your digital vision with our expert consulting"
@@ -240,10 +252,35 @@ const ConsultingPage = () => {
         </div>
 
         {/** FAQ Section */}
-        <ConsultingFaq />
-        <CallToActionTwo />
-        <ContactInformationThree />
-        <Footer />
+        <ConsultingFaq
+          subTitle="Consulting FAQs"
+          title="Answering your questions about digital strategy and consulting"
+          question1="What types of businesses benefit from consulting?"
+          response1=" Consulting can benefit any business looking to enhance its
+                                digital presence, streamline processes, or develop a
+                                strategic roadmap for growth."
+          question2="How does the consulting process work?"
+          response2="We begin with an in-depth assessment of your needs, then
+                      provide tailored recommendations and strategies aligned
+                      with your goals."
+          question3="Can I get help with a specific project, or do you provide
+                      ongoing consulting?"
+          response3="We offer both one-time project consulting and ongoing
+                      advisory services to support continuous growth."
+        />
+        <CallToActionTwo
+          title="Ready to take the next step and bring your digital project to life?"
+          subTitle="Our team of expert designers, developers, and creatives are passionate about their work and love helping our clients succeed."
+          btnText="Contact Us"
+        />
+        <ContactInformationThree
+          subTitle="Moroccan Agency with a Global Reach"
+          title="Our digital agency is located in the vibrant city of Casablanca"
+          data={contactDataTwo}
+          title2="We’d love to hear about your project"
+          subTitle2="We make it simple for clients to connect with us and get their solutions implemented"
+        />
+        <Footer data={FooterData} />
         <ScrollToTop />
       </main>
     </>

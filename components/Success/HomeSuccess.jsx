@@ -25,7 +25,7 @@ export async function getStaticProps() {
   };
 }
 
-const HomeSuccess = (skill1Blur, skill2Blur) => {
+const HomeSuccess = ({ skill1Blur, skill2Blur, ...props }) => {
   const [scale] = useState(1.04);
   const sceneEl = useRef(null);
   useEffect(() => {
@@ -91,7 +91,15 @@ const HomeSuccess = (skill1Blur, skill2Blur) => {
             data-aos-delay="300"
           >
             <div className="success-content mt-lg-0 mt-md-50 mt-sm-50 mt-40">
-              <ProgressBarSkills />
+              <ProgressBarSkills
+                title={props.title}
+                subTitle={props.subTitle}
+                website={props.website}
+                ecommerce={props.ecommerce}
+                webMobileApps={props.webMobileApps}
+                apiIntegrations={props.apiIntegrations}
+                devops={props.devops}
+              />
             </div>
           </div>
         </div>

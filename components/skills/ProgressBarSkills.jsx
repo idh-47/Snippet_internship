@@ -1,17 +1,14 @@
 import ProgressBar from "react-bootstrap/ProgressBar";
 import SectionTitleTwo from "../SectionTitles/SectionTitleTwo";
 
-const ProgressBarSkills = () => {
+const ProgressBarSkills = (props) => {
   return (
     <div>
-      <SectionTitleTwo
-        subTitle="Your success is our motivation"
-        title="We are passionate about using technology to solve problems and create value"
-      />
+      <SectionTitleTwo subTitle={props.subTitle} title={props.title} />
 
       <div className="progress-bar--one">
         <div className="progress-charts">
-          <h6 className="heading ">Websites</h6>
+          <h6 className="heading ">{props.website}</h6>
           <div className="single-progress">
             <ProgressBar
               name="websites"
@@ -25,7 +22,7 @@ const ProgressBarSkills = () => {
         </div>
 
         <div className="progress-charts ">
-          <h6 className="heading ">E-Commerce</h6>
+          <h6 className="heading ">{props.ecommerce}</h6>
           <div className="single-progress">
             <ProgressBar
               name="ecommerce"
@@ -39,7 +36,7 @@ const ProgressBarSkills = () => {
         </div>
 
         <div className="progress-charts ">
-          <h6 className="heading ">Web & Mobile Apps</h6>
+          <h6 className="heading ">{props.webMobileApps}</h6>
           <div className="single-progress">
             <ProgressBar
               name="web and mobile apps"
@@ -53,7 +50,7 @@ const ProgressBarSkills = () => {
         </div>
 
         <div className="progress-charts ">
-          <h6 className="heading ">API & 3rd Party Integrations</h6>
+          <h6 className="heading ">{props.apiIntegrations}</h6>
           <div className="single-progress">
             <ProgressBar
               name="api and integrations"
@@ -67,7 +64,7 @@ const ProgressBarSkills = () => {
         </div>
 
         <div className="progress-charts ">
-          <h6 className="heading ">DevOps</h6>
+          <h6 className="heading ">{props.devops}</h6>
           <div className="single-progress">
             <ProgressBar
               name="devops"

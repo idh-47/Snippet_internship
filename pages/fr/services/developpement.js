@@ -6,21 +6,21 @@ import NextImage from "next/image";
 import Parallax from "parallax-js";
 
 // Components
-import Header from "../../partials/header/Header.jsx";
-import SectionTitleTwo from "../../components/SectionTitles/SectionTitleTwo";
-import Breadcrumb from "../../container/Breadcrumb/Breadcrumb";
-import CallToActionTwo from "../../container/CallToAction/CallToActionTwo";
-import Footer from "../../container/Footer/Footer";
-import ScrollToTop from "../../components/ScrollToTop.jsx";
-import headerBg from "../../public/images/bg/snippet-breadcrumb-bg-studio.jpg";
-import SectionTitle from "../../components/SectionTitles/SectionTitle.jsx";
-import dividerBg from "../../public/images/bg/snippet-breadcrumb-bg-service.jpg";
-import DevelopmentFaq from "../../container/Faq/DevelopmentFaq.js";
-import ContactInformationThree from "../../container/ContactInformation/ContactInformationThree.js";
+import Header from "../../../partials/header/Header.jsx";
+import SectionTitleTwo from "../../../components/SectionTitles/SectionTitleTwo";
+import Breadcrumb from "../../../container/Breadcrumb/Breadcrumb";
+import CallToActionTwo from "../../../container/CallToAction/CallToActionTwo";
+import Footer from "../../../container/Footer/Footer";
+import ScrollToTop from "../../../components/ScrollToTop.jsx";
+import headerBg from "../../../public/images/bg/snippet-breadcrumb-bg-studio.jpg";
+import SectionTitle from "../../../components/SectionTitles/SectionTitle.jsx";
+import dividerBg from "../../../public/images/bg/snippet-breadcrumb-bg-service.jpg";
+import DevelopmentFaq from "../../../container/Faq/DevelopmentFaq.js";
+import ContactInformationThree from "../../../container/ContactInformation/ContactInformationThree.js";
 
 //data imports
-import FooterData from "../../data/Footer/footerItem.json";
-import contactDataTwo from "../../data/contactInfo/contactInfoTwo.json";
+import FooterDatafr from "../../../data/Footer/footerItem-fr.json";
+import contactDataTwofr from "../../../data/contactInfo/contactInfoTwo-fr.json";
 
 const DevelopmentPage = () => {
   const [didViewCountUp, setDidViewCountUp] = useState(false);
@@ -45,12 +45,12 @@ const DevelopmentPage = () => {
       <Head>
         <meta charSet="utf-8" />
         <title>
-          Expert Development Services - Snippet - Building your digital
-          solutions
+          Services de Développement Expert - Snippet - Construire vos solutions
+          numériques
         </title>
         <meta
           name="description"
-          content="Partner with Snippet for expert development services. Our team specializes in web, mobile, and custom software development tailored to bring your vision to life."
+          content="Partenaire avec Snippet pour des services de développement expert. Notre équipe se spécialise dans le développement web, mobile et de logiciels personnalisés adaptés pour donner vie à votre vision."
         />
         <meta
           name="viewport"
@@ -60,19 +60,19 @@ const DevelopmentPage = () => {
       </Head>
       <main>
         <Header
-          home="Home"
-          about="About Us"
-          services="Our Services"
-          consulting="Consulting"
-          design="UX/UI Design"
-          development="Development"
-          contact="Contact Us"
+          home="Accueil"
+          about="À Propos"
+          services="Nos Services"
+          consulting="Conseil"
+          design="Design UX/UI"
+          development="Développement"
+          contact="Nous Contacter"
         />
         <Breadcrumb
           image={headerBg.src}
-          title="Building innovative solutions with cutting-edge development"
+          title="Construire des solutions innovantes avec un développement de pointe"
           content="Services"
-          contentTwo="Development"
+          contentTwo="Développement"
         />
         {/** Introduction Section */}
         <div className="section section-padding-top about-section-padding-bottom-200">
@@ -81,20 +81,21 @@ const DevelopmentPage = () => {
               <div className="col-xl-6 col-lg-6 col-12" data-aos="fade-up">
                 <div className="about-content-area whoweare-content mt-0 mb-md-10 mb-10">
                   <SectionTitleTwo
-                    subTitle="Custom development for your digital success"
-                    title="Creating tomorrow's technology today"
+                    subTitle="Développement personnalisé pour votre succès numérique"
+                    title="Créer la technologie de demain aujourd'hui"
                   />
                   <p>
-                    Our development services transform ideas into powerful
-                    digital solutions. With expertise in modern technologies and
-                    best practices, we build scalable, secure, and user-friendly
-                    applications that drive business growth and deliver
-                    exceptional user experiences.
+                    Nos services de développement transforment les idées en
+                    solutions numériques puissantes. Avec une expertise dans les
+                    technologies modernes et les meilleures pratiques, nous
+                    construisons des applications évolutives, sécurisées et
+                    conviviales qui stimulent la croissance des entreprises et
+                    offrent des expériences utilisateur exceptionnelles.
                   </p>
                   <p>
-                    From web applications to mobile apps and enterprise
-                    solutions, our development team brings your vision to life
-                    with precision and innovation.
+                    Des applications web aux applications mobiles et aux
+                    solutions d entreprise, notre équipe de développement donne
+                    vie à votre vision avec précision et innovation.
                   </p>
                 </div>
               </div>
@@ -110,7 +111,7 @@ const DevelopmentPage = () => {
                       <NextImage
                         src="/images/services/snippet-digital-agency-development.jpg"
                         fill
-                        alt="Snippet developers working on innovative digital solutions"
+                        alt="Développeurs Snippet travaillant sur des solutions numériques innovantes"
                       />
                     </Tilt>
                   </div>
@@ -119,7 +120,7 @@ const DevelopmentPage = () => {
                       <NextImage
                         src="/images/services/snippet-digital-agency-coding.jpg"
                         fill
-                        alt="Clean code and modern development practices at Snippet"
+                        alt="Code propre et pratiques de développement modernes chez Snippet"
                       />
                     </Tilt>
                   </div>
@@ -149,7 +150,7 @@ const DevelopmentPage = () => {
             </div>
             <SectionTitle
               titleOption="color-light text-center"
-              title="Powered by innovation, built with precision, and delivered with excellence"
+              title="Alimenté par l'innovation, construit avec précision, et livré avec excellence"
             />
           </div>
 
@@ -175,7 +176,7 @@ const DevelopmentPage = () => {
                       <NextImage
                         src="/images/services/snippet-digital-agency-web-development.jpg"
                         fill
-                        alt="Snippet team developing responsive web applications"
+                        alt="Équipe Snippet développant des applications web réactives"
                       />
                     </Tilt>
                   </div>
@@ -184,7 +185,7 @@ const DevelopmentPage = () => {
                       <NextImage
                         src="/images/services/snippet-digital-agency-mobile-development.jpg"
                         fill
-                        alt="Mobile app development and testing at Snippet"
+                        alt="Développement et test d'applications mobiles chez Snippet"
                       />
                     </Tilt>
                   </div>
@@ -208,43 +209,52 @@ const DevelopmentPage = () => {
               >
                 <div className="about-content-area whychoose-content">
                   <SectionTitleTwo
-                    subTitle="Our development expertise"
-                    title="Engineering solutions for a better future"
+                    subTitle="Notre expertise en développement"
+                    title="Ingénierie de solutions pour un avenir meilleur"
                   />
                   <p>
-                    Our development approach covers all aspects of modern
-                    software creation:
+                    Notre approche de développement couvre tous les aspects de
+                    la création de logiciels modernes :
                   </p>
                   <ul className="agency-list">
                     <li className="item">
                       <div className="icon">
                         <i className="fas fa-check"></i>
                       </div>
-                      <div className="text">Web Application Development</div>
+                      <div className="text">
+                        Développement d Applications Web
+                      </div>
                     </li>
                     <li className="item">
                       <div className="icon">
                         <i className="fas fa-check"></i>
                       </div>
-                      <div className="text">Mobile App Development</div>
+                      <div className="text">
+                        Développement d Applications Mobiles
+                      </div>
                     </li>
                     <li className="item">
                       <div className="icon">
                         <i className="fas fa-check"></i>
                       </div>
-                      <div className="text">API Integration & Development</div>
+                      <div className="text">
+                        Intégration et Développement d API
+                      </div>
                     </li>
                     <li className="item">
                       <div className="icon">
                         <i className="fas fa-check"></i>
                       </div>
-                      <div className="text">Custom Software Solutions</div>
+                      <div className="text">
+                        Solutions Logicielles Personnalisées
+                      </div>
                     </li>
                   </ul>
                   <p>
-                    Every project is built with scalability, security, and
-                    performance in mind, ensuring your solution grows with your
-                    business needs.
+                    Chaque projet est construit en gardant à l esprit l
+                    évolutivité, la sécurité et les performances, garantissant
+                    que votre solution grandit avec les besoins de votre
+                    entreprise.
                   </p>
                 </div>
               </div>
@@ -254,32 +264,32 @@ const DevelopmentPage = () => {
 
         {/** FAQ Section */}
         <DevelopmentFaq
-          subTitle="Development FAQs"
-          title="Answers to some questions about our development process"
-          question1="What types of development projects does Snippet handle?"
-          response1="We manage a wide range of projects, including web, mobile, and custom software development tailored to your needs."
-          question2="How does Snippet ensure code quality and security?"
-          response2="We implement industry best practices, conduct regular code reviews, and perform rigorous testing to maintain high standards."
-          question3="Can you integrate with existing systems and platforms?"
-          response3="Yes, we specialize in seamless API integrations and can work with legacy systems."
-          question4="Do you offer ongoing support after project launch?"
-          response4="Absolutely. We provide maintenance and support services to ensure continued performance and updates."
-          question5="How long does a typical development project take?"
-          response5="We work in Agile sprints, allowing for flexibility and iterative progress. Project timelines vary based on complexity, but we collaborate closely with you to define milestones and deliverables."
+          subTitle="FAQ sur le Développement"
+          title="Réponses à quelques questions sur notre processus de développement"
+          question1="Quels types de projets de développement Snippet gère-t-il ?"
+          response1="Nous gérons une large gamme de projets, incluant le développement web, mobile et de logiciels personnalisés adaptés à vos besoins."
+          question2="Comment Snippet assure-t-il la qualité du code et la sécurité ?"
+          response2="Nous implémentons les meilleures pratiques de l'industrie, effectuons des revues de code régulières et réalisons des tests rigoureux pour maintenir des standards élevés."
+          question3="Pouvez-vous intégrer avec les systèmes et plateformes existants ?"
+          response3="Oui, nous nous spécialisons dans les intégrations d'API transparentes et pouvons travailler avec des systèmes hérités."
+          question4="Offrez-vous un support continu après le lancement du projet ?"
+          response4="Absolument. Nous fournissons des services de maintenance et de support pour assurer des performances continues et des mises à jour."
+          question5="Combien de temps dure un projet de développement typique ?"
+          response5="Nous travaillons en sprints Agile, permettant la flexibilité et le progrès itératif. Les délais de projet varient selon la complexité, mais nous collaborons étroitement avec vous pour définir les étapes et les livrables."
         />
         <CallToActionTwo
-          title="Ready to bring your development project to life?"
-          subTitle="Our team of expert developers and engineers are passionate about creating innovative solutions that drive your business forward."
-          btnText="Contact Us"
+          title="Prêt à donner vie à votre projet de développement ?"
+          subTitle="Notre équipe d'experts développeurs et ingénieurs sont passionnés par la création de solutions innovantes qui font avancer votre entreprise."
+          btnText="Nous Contacter"
         />
         <ContactInformationThree
-          subTitle="Moroccan Agency with a Global Reach"
-          title="Our digital agency is located in the vibrant city of Casablanca"
-          data={contactDataTwo}
-          title2="We'd love to hear about your project"
-          subTitle2="We make it simple for clients to connect with us and get their solutions implemented"
+          subTitle="Agence Marocaine avec une portée mondiale"
+          title="Notre agence numérique est située dans la ville dynamique de Casablanca"
+          data={contactDataTwofr}
+          title2="Nous aimerions entendre parler de votre projet"
+          subTitle2="Nous rendons simple pour les clients de se connecter avec nous et d'implémenter leurs solutions"
         />
-        <Footer data={FooterData} />
+        <Footer data={FooterDatafr} />
         <ScrollToTop />
       </main>
     </>

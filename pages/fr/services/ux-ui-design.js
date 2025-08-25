@@ -6,21 +6,21 @@ import NextImage from "next/image";
 import Parallax from "parallax-js";
 
 // Components
-import Header from "../../partials/header/Header.jsx";
-import SectionTitleTwo from "../../components/SectionTitles/SectionTitleTwo.jsx";
-import Breadcrumb from "../../container/Breadcrumb/Breadcrumb.js";
-import CallToActionTwo from "../../container/CallToAction/CallToActionTwo.js";
-import Footer from "../../container/Footer/Footer.js";
-import ScrollToTop from "../../components/ScrollToTop.jsx";
-import headerBg from "../../public/images/bg/snippet-breadcrumb-bg-studio.jpg";
-import SectionTitle from "../../components/SectionTitles/SectionTitle.jsx";
-import dividerBg from "../../public/images/bg/snippet-ux-ui-design-divider-bg.jpg";
-import UxUiDesignFaq from "../../container/Faq/UxUiDesignFaq.js";
-import ContactInformationThree from "../../container/ContactInformation/ContactInformationThree.js";
+import Header from "../../../partials/header/Header.jsx";
+import SectionTitleTwo from "../../../components/SectionTitles/SectionTitleTwo.jsx";
+import Breadcrumb from "../../../container/Breadcrumb/Breadcrumb.js";
+import CallToActionTwo from "../../../container/CallToAction/CallToActionTwo.js";
+import Footer from "../../../container/Footer/Footer.js";
+import ScrollToTop from "../../../components/ScrollToTop.jsx";
+import headerBg from "../../../public/images/bg/snippet-breadcrumb-bg-studio.jpg";
+import SectionTitle from "../../../components/SectionTitles/SectionTitle.jsx";
+import dividerBg from "../../../public/images/bg/snippet-ux-ui-design-divider-bg.jpg";
+import UxUiDesignFaq from "../../../container/Faq/UxUiDesignFaq.js";
+import ContactInformationThree from "../../../container/ContactInformation/ContactInformationThree.js";
 
 //data imports
-import FooterData from "../../data/Footer/footerItem.json";
-import contactDataTwo from "../../data/contactInfo/contactInfoTwo.json";
+import FooterDatafr from "../../../data/Footer/footerItem-fr.json";
+import contactDataTwofr from "../../../data/contactInfo/contactInfoTwo-fr.json";
 
 const UxUiDesignPage = () => {
   const [didViewCountUp, setDidViewCountUp] = useState(false);
@@ -45,12 +45,12 @@ const UxUiDesignPage = () => {
       <Head>
         <meta charSet="utf-8" />
         <title>
-          User-Centric UX/UI Design Services - Snippet - Empowering your digital
-          journey
+          Services de Design UX/UI Centrés sur l Utilisateur - Snippet -
+          Accompagnement de votre parcours numérique
         </title>
         <meta
           name="description"
-          content="Enhance your digital presence with Snippet's UX/UI design services. We create user-centered, visually appealing, and functional designs to drive engagement and success."
+          content="Améliorez votre présence numérique avec les services de design UX/UI de Snippet. Nous créons des designs centrés sur l'utilisateur, visuellement attrayants et fonctionnels pour stimuler l'engagement et le succès."
         />
         <meta
           name="viewport"
@@ -60,39 +60,42 @@ const UxUiDesignPage = () => {
       </Head>
       <main>
         <Header
-          home="Home"
-          about="About Us"
-          services="Our Services"
-          consulting="Consulting"
-          design="UX/UI Design"
-          development="Development"
-          contact="Contact Us"
+          home="Accueil"
+          about="À Propos"
+          services="Nos Services"
+          consulting="Conseil"
+          design="Design UX/UI"
+          development="Développement"
+          contact="Contact"
         />
         <Breadcrumb
           image={headerBg.src}
-          title="Turning ideas into stunning, user-friendly interfaces"
+          title="Transformer les idées en interfaces magnifiques et conviviales"
           content="Services"
-          contentTwo="UX/UI Design"
+          contentTwo="Design UX/UI"
         />
-        {/** Introduction Section */}
+        {/** Section Introduction */}
         <div className="section section-padding-top about-section-padding-bottom-200">
           <div className="container">
             <div className="row">
               <div className="col-xl-6 col-lg-6 col-12" data-aos="fade-up">
                 <div className="about-content-area whoweare-content mt-0 mb-md-10 mb-10">
                   <SectionTitleTwo
-                    subTitle="Design that puts the user first"
-                    title="Creating engaging, user-centric designs for digital success"
+                    subTitle="Un design qui place l'utilisateur au centre"
+                    title="Créer des designs engageants et centrés sur l'utilisateur pour le succès numérique"
                   />
                   <p>
-                    Our UX/UI design services focus on delivering meaningful and
-                    memorable experiences. Through careful research, strategic
-                    planning, and intuitive design, we craft interfaces that
-                    resonate with users and support your business goals.
+                    Nos services de design UX/UI se concentrent sur la création
+                    d expériences significatives et mémorables. Grâce à une
+                    recherche approfondie, une planification stratégique et un
+                    design intuitif, nous créons des interfaces qui résonnent
+                    avec les utilisateurs et soutiennent vos objectifs
+                    commerciaux.
                   </p>
                   <p>
-                    Our approach combines creativity and data-driven insights to
-                    create solutions that engage, inspire, and perform.
+                    Notre approche combine créativité et insights basés sur les
+                    données pour créer des solutions qui engagent, inspirent et
+                    performent.
                   </p>
                 </div>
               </div>
@@ -108,7 +111,7 @@ const UxUiDesignPage = () => {
                       <NextImage
                         src="/images/services/snippet-digital-agency-ux-ui-design.jpg"
                         fill
-                        alt="User-centric interface design by snippet for enhanced digital experiences"
+                        alt="Design d'interface centré sur l'utilisateur par Snippet pour des expériences numériques améliorées"
                       />
                     </Tilt>
                   </div>
@@ -117,7 +120,7 @@ const UxUiDesignPage = () => {
                       <NextImage
                         src="/images/services/snippet-digital-agency-ux-ui-layout.jpg"
                         fill
-                        alt="Intuitive ux wireframes by snippet to improve engagement and usability"
+                        alt="Wireframes UX intuitifs par Snippet pour améliorer l'engagement et l'utilisabilité"
                       />
                     </Tilt>
                   </div>
@@ -136,7 +139,7 @@ const UxUiDesignPage = () => {
           </div>
         </div>
 
-        {/** Divider */}
+        {/** Séparateur */}
         <div
           className="video-section section section-padding overlay-two"
           style={{ backgroundImage: `url(${dividerBg.src})` }}
@@ -147,7 +150,7 @@ const UxUiDesignPage = () => {
             </div>
             <SectionTitle
               titleOption="color-light text-center"
-              title="Designing with empathy, building with purpose"
+              title="Concevoir avec empathie, construire avec un but"
             />
           </div>
 
@@ -156,13 +159,13 @@ const UxUiDesignPage = () => {
               <NextImage
                 src="/images/shape-animation/newsletter-shape.png"
                 fill
-                alt="Snippet - Accessible and inclusive design solutions"
+                alt="Snippet - Solutions de design accessibles et inclusives"
               />
             </span>
           </div>
         </div>
 
-        {/** UX/UI Design Details Section */}
+        {/** Section Détails du Design UX/UI */}
         <div className="section section-padding-top section-padding-bottom-180">
           <div className="container">
             <div className="row">
@@ -173,7 +176,7 @@ const UxUiDesignPage = () => {
                       <NextImage
                         src="/images/services/snippet-digital-agency-ux-ui-design-prototyping.jpg"
                         fill
-                        alt="Snippet - Prototype testing and feedback for a refined user experience"
+                        alt="Snippet - Test de prototypes et feedback pour une expérience utilisateur raffinée"
                       />
                     </Tilt>
                   </div>
@@ -182,7 +185,7 @@ const UxUiDesignPage = () => {
                       <NextImage
                         src="/images/services/snippet-digital-agency-ux-ui-design-wireframing.jpg"
                         fill
-                        alt="Snippet : custom ux/ui design aligned with brand identity and user needs"
+                        alt="Snippet : design UX/UI personnalisé aligné avec l'identité de marque et les besoins utilisateurs"
                       />
                     </Tilt>
                   </div>
@@ -192,7 +195,7 @@ const UxUiDesignPage = () => {
                       <NextImage
                         src="/images/shape-animation/about-shape-1.png"
                         fill
-                        alt="Responsive ux/ui solutions for seamless user interaction"
+                        alt="Solutions UX/UI responsives pour une interaction utilisateur fluide"
                       />
                     </span>
                   </div>
@@ -206,50 +209,53 @@ const UxUiDesignPage = () => {
               >
                 <div className="about-content-area whychoose-content">
                   <SectionTitleTwo
-                    subTitle="Our UX/UI design expertise"
-                    title="From concept to final touches"
+                    subTitle="Notre expertise en design UX/UI"
+                    title="Du concept aux finitions"
                   />
                   <p>
-                    We specialize in transforming ideas into functional,
-                    visually appealing interfaces that align with user
-                    expectations and business objectives.
+                    Nous nous spécialisons dans la transformation d idées en
+                    interfaces fonctionnelles et visuellement attrayantes qui s
+                    alignent avec les attentes des utilisateurs et les objectifs
+                    commerciaux.
                   </p>
                   <ul className="agency-list">
                     <li className="item">
                       <div className="icon">
                         <i className="fas fa-check"></i>
                       </div>
-                      <div className="text">User Research & Personas</div>
+                      <div className="text">
+                        Recherche Utilisateur & Personas
+                      </div>
                     </li>
                     <li className="item">
                       <div className="icon">
                         <i className="fas fa-check"></i>
                       </div>
-                      <div className="text">Wireframing & Prototyping</div>
+                      <div className="text">Wireframing & Prototypage</div>
                     </li>
                     <li className="item">
                       <div className="icon">
                         <i className="fas fa-check"></i>
                       </div>
-                      <div className="text">Interface & Visual Design</div>
+                      <div className="text">Design d Interface & Visuel</div>
                     </li>
                     <li className="item">
                       <div className="icon">
                         <i className="fas fa-check"></i>
                       </div>
-                      <div className="text">Usability Testing</div>
+                      <div className="text">Tests d Utilisabilité</div>
                     </li>
                     <li className="item">
                       <div className="icon">
                         <i className="fas fa-check"></i>
                       </div>
-                      <div className="text">Accessibility Audits</div>
+                      <div className="text">Audits d Accessibilité</div>
                     </li>
                   </ul>
                   <p>
-                    Our team works across every stage of design, from initial
-                    research to final refinements, ensuring a cohesive and
-                    engaging user experience.
+                    Notre équipe travaille à chaque étape du design, de la
+                    recherche initiale aux raffinements finaux, assurant une
+                    expérience utilisateur cohérente et engageante.
                   </p>
                 </div>
               </div>
@@ -257,34 +263,34 @@ const UxUiDesignPage = () => {
           </div>
         </div>
 
-        {/** FAQ Section */}
+        {/** Section FAQ */}
         <UxUiDesignFaq
-          subTitle="UX/UI Design FAQs"
-          title="Everything you need to know about our design process"
-          question1="What is your approach to user-centered design?"
-          response1="We focus on research-driven, user-centered methods to create intuitive and effective interfaces."
-          question2="How does UX differ from UI in your services?"
-          response2="UX focuses on overall experience, while UI hones in on the visual and interactive design elements."
-          question3="Can you help improve the design of an existing website or app?"
-          response3="Absolutely. We offer redesign services that enhance both usability and aesthetic appeal."
-          question4="What tools do you use for prototyping and design?"
-          response4="We use industry-leading tools, such as Figma and Sketch, to build and test our designs."
-          question5="How long does a typical UX/UI design project take?"
-          response5="Timelines vary, but we work with clients to establish clear milestones based on project complexity."
+          subTitle="FAQ Design UX/UI"
+          title="Tout ce que vous devez savoir sur notre processus de design"
+          question1="Quelle est votre approche du design centré sur l'utilisateur ?"
+          response1="Nous nous concentrons sur des méthodes centrées sur l'utilisateur et basées sur la recherche pour créer des interfaces intuitives et efficaces."
+          question2="En quoi l'UX diffère-t-elle de l'UI dans vos services ?"
+          response2="L'UX se concentre sur l'expérience globale, tandis que l'UI se concentre sur les éléments de design visuels et interactifs."
+          question3="Pouvez-vous aider à améliorer le design d'un site web ou d'une app existante ?"
+          response3="Absolument. Nous offrons des services de refonte qui améliorent à la fois l'utilisabilité et l'attrait esthétique."
+          question4="Quels outils utilisez-vous pour le prototypage et le design ?"
+          response4="Nous utilisons des outils leaders de l'industrie, comme Figma et Sketch, pour construire et tester nos designs."
+          question5="Combien de temps prend un projet de design UX/UI typique ?"
+          response5="Les délais varient, mais nous travaillons avec les clients pour établir des jalons clairs basés sur la complexité du projet."
         />
         <CallToActionTwo
-          title="Ready to transform your digital experience with exceptional design?"
-          subTitle="Our team of expert UX/UI designers are passionate about creating beautiful, functional interfaces that users love and businesses trust."
-          btnText="Contact Us"
+          title="Prêt à transformer votre expérience numérique avec un design exceptionnel ?"
+          subTitle="Notre équipe de designers UX/UI experts est passionnée par la création d'interfaces belles et fonctionnelles que les utilisateurs adorent et en qui les entreprises ont confiance."
+          btnText="Nous Contacter"
         />
         <ContactInformationThree
-          subTitle="Moroccan Agency with a Global Reach"
-          title="Our digital agency is located in the vibrant city of Casablanca"
-          data={contactDataTwo}
-          title2="We'd love to hear about your project"
-          subTitle2="We make it simple for clients to connect with us and get their solutions implemented"
+          subTitle="Agence Marocaine avec une Portée Mondiale"
+          title="Notre agence numérique est située dans la ville dynamique de Casablanca"
+          data={contactDataTwofr}
+          title2="Nous aimerions entendre parler de votre projet"
+          subTitle2="Nous facilitons la connexion des clients avec nous et la mise en œuvre de leurs solutions"
         />
-        <Footer data={FooterData} />
+        <Footer data={FooterDatafr} />
         <ScrollToTop />
       </main>
     </>

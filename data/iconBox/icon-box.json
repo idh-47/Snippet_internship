@@ -1,0 +1,51 @@
+[
+    {
+        "id": "1",
+        "icon": "images/svg/linea/linea-basic-target.svg",
+        "title": "Consulting",
+        "desc": "We help you identify the key features and functionality that will make your product stand out, and we work with you to design and build a solution that meets your needs and exceeds your expectations.",
+        "pageLink": "Learn More",
+        "link": "/services/consulting"
+    },
+    {
+        "id": "2",
+        "icon": "images/svg/linea/linea-basic-picture-multiple.svg",
+        "title": "UX/UI Design",
+        "desc": "Whether you need a new website, an app, or any other type of digital product, we have the skills and expertise to design a solution that meets your needs and delivers the best possible user experience.",
+        "pageLink": "Learn More",
+        "link": "/services/ux-ui-design"
+    },
+    {
+        "id": "3",
+        "icon": "images/svg/linea/linea-basic-picture.svg",
+        "title": "Development",
+        "desc": "We take care of the entire development cycle of your product, from the initial conceptualization and design phase, through to the coding, testing, and deployment stages.",
+        "pageLink": "Learn More",
+        "link": "/services/development"
+    },
+    {
+        "id": "4",
+        "icon": "images/svg/linea/linea-ecommerce-cart-plus.svg",
+        "title": "Ecommerce",
+        "desc": "Our web design services can help rediscover your business’ image in the internet marketplace.",
+        "pageLink": "Learn More",
+        "link": "services"
+    },
+    {
+        "id": "5",
+        "icon": "images/svg/linea/linea-basic-gear.svg",
+        "title": "Development",
+        "desc": "Our web design services can help rediscover your business’ image in the internet marketplace.",
+        "pageLink": "Learn More",
+        "link": "services"
+    },
+    {
+        "id": "6",
+        "icon": "images/svg/linea/linea-basic-display.svg",
+        "title": "Marketing",
+        "desc": "Our web design services can help rediscover your business’ image in the internet marketplace.",
+        "pageLink": "Learn More",
+        "link": "services"
+    }
+    
+]

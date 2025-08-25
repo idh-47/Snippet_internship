@@ -1,0 +1,70 @@
+[
+    {
+        "id": 1,
+        "title": "Services",
+        "list": [
+            {
+                "id": 1,
+                "text": "Consulting",
+                "url": "/services/consulting"
+            },
+            {
+                "id": 2,
+                "text": "UX/UI Desing",
+                "url": "/services/ux-ui-design"
+            },
+            {
+                "id": 3,
+                "text": "Development",
+                "url": "/services/development"
+            }
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Use cases",
+        "list": [
+            {
+                "id": 1,
+                "text": "Ecommerce",
+                "url": "/"
+            },
+            {
+                "id": 2,
+                "text": "Web & Mobile App",
+                "url": "/"
+            },
+            {
+                "id": 3,
+                "text": "3rd Party Integrations",
+                "url": "/"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "title": "About",
+        "list": [
+            {
+                "id": 1,
+                "text": "Who we are",
+                "url": "/about-us"
+            },
+            {
+                "id": 2,
+                "text": "Why choose us",
+                "url": "/"
+            },
+            {
+                "id": 3,
+                "text": "Our Process",
+                "url": "/"
+            },
+            {
+                "id": 4,
+                "text": "Contact us",
+                "url": "/contact"
+            }
+        ]
+    }
+]

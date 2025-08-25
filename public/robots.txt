@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://snippet.ma
+
+# Sitemaps
+Sitemap: https://snippet.ma/sitemap.xml

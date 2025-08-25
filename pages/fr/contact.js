@@ -12,7 +12,7 @@ import headerBg from "../../public/images/bg/snippet-breadcrumb-bg-casablanca.jp
 
 //data imports
 import contactDatafr from "../../data/contactInfo/contactinfo-fr.json";
-import FooterDatafr from "../../data/Footer/footerItem-fr.json";
+import FooterDatafr from "../../data/Footer/footeritem-fr.json";
 
 const Contact = () => {
   return (
